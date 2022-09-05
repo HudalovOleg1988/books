@@ -19,24 +19,6 @@
   }
 
 
-
-  //подкючение к бд и отправка запроса
-  // function db()
-  // {
-  //   global $pdo;
-  //   try
-  //   {
-  //     $pdo = new PDO('mysql:host=localhost;dbname=book','root','root');
-  //     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-  //     $pdo->exec('SET NAMES "utf8"');
-  //   }
-  //   catch (PDOException $e)
-  //   {
-  //     echo "невозможно подключиться к базе данных".$e->getMessage();
-  //     exit();
-  //   }
-  // }
-
   function html($text)
   {
     return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
@@ -121,25 +103,6 @@
     $filters['age']          = fetchAll("SELECT * FROM Age");
     $filters['mediaformat']  = fetchAll("SELECT * FROM Mediaformat");
   }
-
-
-
-
-
-
-
-
-
-
-
-  // //функция раздела main
-  // function main_page()
-  // {
-  //   get_filter();
-  //   catalog();
-  //   get_parent_category();
-  //   pattern_include("catalog");
-  // }
 
 
 
