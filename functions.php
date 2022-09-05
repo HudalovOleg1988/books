@@ -1,9 +1,5 @@
 <?php
 
-  //основные функции разделов
-  // function add_cart(){}
-  // function add_product_page(){}
-  // function add_product(){}
   function product(){
     get_product();
     cart_count();
