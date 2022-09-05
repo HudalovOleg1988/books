@@ -1,0 +1,267 @@
+@import "/book/css/global/var";
+
+@height: 60px;
+
+.itemsBorder {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 22px;
+  width: 2px;
+  height: 14px;
+  background-color: #000;
+}
+header {
+  position: relative;
+  height: @height;
+  background-color: #fff;
+  padding: 0 100px 0 220px;
+  border-bottom: 2px solid #000;
+  overflow: hidden;
+
+  @media (max-width: 960px) {
+    width: 960px;
+  }
+
+  .departmentsButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: @height;
+    background: url(/book/image/icon/menu.png) no-repeat center center;
+    background-size: 16px;
+    cursor: pointer;
+    transition-property: background-size;
+    transition-duration: 0.1s;
+
+    &:hover {
+      background-size: 18px;
+    }
+
+    &:after {
+      .itemsBorder;
+      right: 0;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 140px;
+    height: @height;
+    background: url(/book/image/icon/logo.png) no-repeat center center;
+    background-size: 21px;
+    transition-property: background-size;
+    transition-duration: 0.1s;
+
+    &:hover {
+      background-size: 23px;
+    }
+  }
+
+  form  {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    padding: 0 142px 0 0;
+    // border:1px solid red;
+
+    input:focus {
+      outline: none;
+    }
+
+    .searchFormSelectCheck {
+      background: #f75e82;
+    }
+
+    .searchFormSelect {
+      position: absolute;
+      // top: 0;
+      left: 0;
+      // width: 130px;
+      // float: left;
+      height: 60px;
+      line-height: 60px;
+      .fontFamily;
+      padding: 0 30px 0 10px;
+      cursor: pointer;
+      // border: 1px solid blue;
+      transition-property: background-position;
+      transition-delay: .1s;
+
+      &:before {
+        .itemsBorder;
+        left: 0;
+      }
+
+      &:after {
+        .itemsBorder;
+        right: 0;
+      }
+
+      &:hover {
+        background-position: 80% 28px;
+        background-size: 9px;
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 30px;
+        height: 60px;
+        background: url(/book/image/icon/select.png) no-repeat center center;
+        background-size: 9px;
+        // border: 1px solid red;
+      }
+    }
+
+    .searchFormSelectBoard {
+      width: 0;
+      // border: 1px solid red;
+      // display: none;
+    }
+
+    input[type=text] {
+      // float: left;
+      width: 100%;
+      // display: block;
+      height: 60px;
+      .fontFamily;
+      background: url(/book/image/icon/search.png) no-repeat 13px center;
+      background-size: 14px;
+      -webkit-appearance: none;
+      padding-left: 35px;
+      border: none;
+      // border:1px solid blue;
+
+      &::placeholder {
+        .fontFamily;
+        color: rgb(0,0,0);
+      }
+    }
+
+    input[type=submit] {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      width: 110px;
+      height: 40px;
+      .fontFamily;
+      font-size: 14px;
+      color: darken(#F0F0F0,40%);
+      background-color: #F0F0F0;
+      border: 1px solid darken(#F0F0F0,1%);
+      border-radius: 7px;
+      cursor: pointer;
+      transition-property: background-color;
+      transition-duration: 0.1s;
+
+      &:hover {
+        background-color: darken(#F0F0F0,5%);
+      }
+    }
+  }
+
+  .header_cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: @height;
+    text-decoration: none;
+    // border: 1px solid red;
+
+    div {
+      width: 50px;
+      height: @height;
+      line-height: @height;
+      background: url(/book/image/icon/cart.png) no-repeat 0 center;
+      background-size: 15px;
+      padding-left: 20px;
+      .fontFamily;
+      // border: 1px solid blue;
+      margin: auto;
+    }
+  }
+
+  // nav {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   width: 100px;
+  //   height: @height;
+  //   // border: 1px solid red;
+  //
+  //   a {
+  //     position: relative;
+  //     float: left;
+  //     width: 100px;
+  //     height: @height;
+      // .fontFamily;
+  //     text-align: center;
+  //     text-decoration: none;
+  //     // border: 1px solid red;
+  //
+  //     div {
+        // background: url(/book/image/icon/cart.png) no-repeat 0 center;
+        // background-size: 15px;
+  //     }
+  //
+  //     div {
+  //       display: inline-block;
+  //       height: 100%;
+  //       line-height: 60px;
+  //       padding-left: 25px;
+  //       transition-property: background-size;
+  //       transition-duration: 0.1s;
+  //     }
+  //     &:hover div {
+  //       background-size: 18px;
+  //     }
+  //   }
+  // }
+}
+
+.form_option_block {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 1000;
+
+  .form_option_block_close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .form_option_block_list {
+    position: absolute;
+    top: 60px;
+    left: 170px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+
+    .form_option_block_list_item {
+      height: 40px;
+      line-height: 40px;
+      .fontFamily;
+      font-size: 16px;
+      padding: 0 35px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(240,240,240);
+      }
+    }
+  }
+}

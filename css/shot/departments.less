@@ -1,0 +1,161 @@
+@import "/book/css/global/var";
+
+.departmentsBlockShow {
+  animation-name: departmentsBlockShow;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+}
+.departmentsBlockHide {
+  animation-name: departmentsBlockHide;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+}
+
+.departmentsBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 300px;
+  .fontFamily;
+  display: none;
+
+  .departmentsBlockClose {
+    height: 100%;
+    background: url("/book/image/icon/close.png") no-repeat 10px 20px;
+    background-size: 17px;
+    cursor: pointer;
+  }
+
+  .departmentsBlockSiteBarShow {
+    animation-name: departmentsBlockSiteBarShow;
+    animation-duration: .4s;
+    animation-delay: .08s;
+    animation-fill-mode: forwards;
+  }
+  .departmentsBlockSiteBarHide {
+    animation-name: departmentsBlockSiteBarHide;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+  }
+
+  .departmentsBlockSiteBar {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    padding-top: 60px;
+
+    .departmentsBlockSiteBarHeader {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      background: url("/book/image/icon/logo.png") no-repeat 41px center;
+      background-size: 21px;
+      padding-left: 83px;
+      border-bottom: 1px solid #000;
+    }
+
+    .departmentsBlockSiteBarContent {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+
+      .departmentsBlockSiteBarContentDepartmentsHide {
+        animation-name: departmentsBlockSiteBarContentDepartmentsHide;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+      }
+      .departmentsBlockSiteBarContentDepartmentsShow {
+        animation-name: departmentsBlockSiteBarContentDepartmentsShow;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+      }
+
+      .departmentsBlockSiteBarContentDepartments {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+
+        li {
+          height: 51px;
+          line-height: 51px;
+          font-size: 14px;
+          background: url("/book/image/icon/right.png") no-repeat 93% center;
+          background-size: 11px;
+          padding-left: 41px;
+          cursor: pointer;
+
+          &:hover {
+            background: url("/book/image/icon/rightHover.png") no-repeat 93% center;
+            background-size: 11px;
+            text-decoration: underline;
+            background-color: rgb(245,245,245);
+          }
+        }
+      }
+
+      .departmentsBlockSiteBarContentSubDepartmentsShow {
+        animation-name: departmentsBlockSiteBarContentSubDepartmentsShow;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+      }
+
+      .departmentsBlockSiteBarContentSubDepartmentsHide {
+        animation-name: departmentsBlockSiteBarContentSubDepartmentsHide;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+      }
+
+      .departmentsBlockSiteBarContentSubDepartments {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        padding-bottom: 100px;
+
+        .departmentsBlockSiteBarContentSubDepartmentsBack {
+          height: 51px;
+          line-height: 51px;
+          background: url("/book/image/icon/back.png") no-repeat 41px center;
+          background-size: 15px;
+          padding-left: 70px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgb(245,245,245);
+          }
+        }
+        li {
+          height: 51px;
+          line-height: 51px;
+          padding-left: 41px;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes departmentsBlockSiteBarShow {from{left: -300px;}to{left: 0;}}
+@keyframes departmentsBlockSiteBarHide {from{left: 0;}to{left: -300px;}}
+@keyframes departmentsBlockShow {from{background-color: rgba(0,0,0,0);}to{background-color: rgba(0,0,0,0.6);}}
+@keyframes departmentsBlockHide {from{background-color: rgba(0,0,0,0.6);}to{background-color: rgba(0,0,0,0);}}
+@keyframes departmentsBlockSiteBarContentDepartmentsHide {from{left: 0;}to{left: -300px;}}
+@keyframes departmentsBlockSiteBarContentDepartmentsShow {from{left: -300px;}to{left: 0;}}
+@keyframes departmentsBlockSiteBarContentSubDepartmentsShow {from{left: 300px;}to{left: 0;}}
+@keyframes departmentsBlockSiteBarContentSubDepartmentsHide {from{left: 0;}to{left: 300px;}}
