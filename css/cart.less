@@ -1,0 +1,345 @@
+@import "/book/css/global/var";
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  .fontFamily;
+  // border: 3px solid blue;
+
+  .cart {
+    width: 1300px;
+    min-height: 100%;
+    // border: 3px solid blue;
+    margin: auto;
+    overflow: hidden;
+
+    .cart_list {
+      float: left;
+      width: 70%;
+      // height: 100%;
+      padding-top: 41px;
+      // border: 1px solid red;
+
+      .cart_list_title {
+        height: 41px;
+        line-height: 41px;
+        // border: 1px solid red;
+
+        span {
+          &:first-child {
+            font-size: 32px;
+          }
+          &:nth-child(2) {
+            font-size: 16px;
+            font-weight: normal;
+            margin-left: 15px;
+          }
+          &:last-child {
+            font-size: 20px;
+            margin-left: 15px;
+          }
+        }
+      }
+      .cart_list_select {
+        height: 85px;
+        line-height: 85px;
+        // border: 1px solid red;
+
+        div {
+          float: left;
+          height: 85px;
+          // border: 1px solid red;
+
+          &:first-child {
+            position: relative;
+            width: 50px;
+            // border: 1px solid red;
+
+            span {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              display: block;
+              width: 22px;
+              height: 22px;
+              border: 2px solid #000;
+              border-radius: 3px;
+              margin: -11px 0 0 -11px;
+              cursor: pointer;
+              display: none;
+
+              a {
+                display: block;
+                height: 100%;
+              }
+            }
+
+            .cart_list_select_checked {
+              background: url("/book/image/icon/check.png") no-repeat center center;
+              background-size: 13px;
+              background-color: #f75e82;
+              // display: none;
+
+              &:hover {
+                background-color: lighten(#f75e82,20%);
+                border-width: 1px !important;
+              }
+            }
+          }
+          &:nth-child(2) {
+            font-size: 13px;
+            padding: 0 10px;
+            -webkit-user-select: none;
+          }
+          &:last-child {
+            font-size: 24px;
+            background: url('/book/image/icon/ruble.png') no-repeat right center;
+            background-size: 17px;
+            padding: 0 20px 0 10px;
+          }
+        }
+      }
+      .cart_list_goods {
+        // height: 300px;
+        padding-top: 10px;
+        border-top: 1px solid #000;
+        // border: 1px solid red;
+
+        .cart_list_goods_item {
+          height: 150px;
+          // border: 1px solid red;
+          margin-bottom: 15px;
+
+          .cart_list_goods_item_check {
+            float: left;
+            position: relative;
+            width: 50px;
+            height: 150px;
+            // border: 1px solid blue;
+
+            a {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 22px;
+              height: 22px;
+              border: 2px solid #000;
+              border-radius: 3px;
+              margin: -11px 0 0 -11px;
+              cursor: pointer;
+            }
+
+            .cart_list_goods_item_check_checkbox_checked {
+              // display: none;
+              background: url("/book/image/icon/check.png") no-repeat center center;
+              background-size: 13px;
+              background-color: #f75e82;
+
+              &:hover {
+                background-color: lighten(#f75e82,20%);
+                border-width: 1px !important;
+              }
+            }
+          }
+          .cart_list_goods_item_image {
+            float: left;
+            position: relative;
+            width: 150px;
+            height: 150px;
+            // border: 1px solid blue;
+
+            img {
+              position: absolute;
+              top: 0;
+              botttom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              height: 95%;
+            }
+          }
+          .cart_list_goods_item_info {
+            float: left;
+            width: 500px;
+            height: 150px;
+            // border: 1px solid blue;
+            border-bottom: 1px solid #000;
+
+            div {
+              height: 50px;
+              // border: 1px solid blue;
+
+              &:first-child {
+                font-size: 13px;
+                line-height: 80px;
+                span {
+                  float: left;
+                  display: inline-block;
+                  height: 50px;
+                  // line-height: 50px;
+                  padding: 0 20px 0 10px;
+                  // border: 1px solid blue;
+                }
+                a {
+                  float: left;
+                  display: block;
+                  height: 50px;
+                  // line-height: 50px;
+                  color: #000;
+                  text-decoration: none;
+                  // border: 1px solid blue;
+                }
+              }
+
+              &:nth-child(2) {
+                min-height: 20px;
+                line-height: 20px;
+                font-size: 18px;
+                padding-left: 10px;
+                // border: 1px solid red;
+              }
+              &:last-child {
+                line-height: 30px;
+                span {
+                  display: inline-block;
+                  // height: 15px;
+                  line-height: 15px;
+                  background: url('/book/image/icon/ruble.png') no-repeat right center;
+                  background-size: 14px;
+                  padding: 0 15px 0 10px;
+                  // border: 1px solid blue;
+                }
+              }
+            }
+          }
+
+          .cart_list_goods_item_count {
+            float: left;
+            width: 205px;
+            height: 150px;
+            // border: 1px solid blue;
+            border-bottom: 1px solid #000;
+            -webkit-user-select: none;
+
+            .cart_list_goods_item_count_form {
+              height: 45px;
+              width: 179px;
+              // border: 1px solid blue;
+              margin: 52px 0 0 15px;
+
+              div {
+                float: left;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                font-size: 18px;
+                // border: 1px solid blue;
+
+                &:first-child,
+                &:last-child {
+                  width: 45px;
+                  border-radius: 5px;
+                  cursor: pointer;
+
+                  a {
+                    display: block;
+                    height: 100%;
+                    // border: 1px solid blue;
+                  }
+
+                  &:hover {
+                    border: 2px solid #000;
+                  }
+                }
+                &:first-child {
+                  background: url('/book/image/icon/minus.png') no-repeat center center;
+                  background-size: 13px;
+                }
+                &:last-child {
+                  background: url('/book/image/icon/plus.png') no-repeat center center;
+                  background-size: 13px;
+                }
+                &:nth-child(2) {
+                  width: 85px;
+                  margin: 0 2px;
+                  border-radius: 5px;
+                  // border: 2px solid #000;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .cart_check {
+      float: left;
+      width: 30%;
+      height: 100%;
+      padding-top: 80px;
+      // border: 1px solid red;
+
+      .cart_check_price {
+        float: right;
+        width: 321px;
+        height: 250px;
+        background-color: #FAFAFA;
+        // border: 1px solid red;
+        border-radius: 7px;
+        padding: 0 20px;
+
+        div {
+          &:first-child {
+            height: 66px;
+            line-height: 66px;
+            border-bottom: 1px solid #000;
+            // border: 1px solid red;
+          }
+
+          &:nth-child(2),
+          &:nth-child(3) {
+            height: 46px;
+            line-height: 46px;
+
+            span:last-child {
+              padding-right: 20px;
+              background: url('/book/image/icon/ruble.png') no-repeat right center;
+              background-size: 15px;
+            }
+          }
+
+          span {
+            float: left;
+            height: inherit;
+            line-height: inherit;
+            display: inline-block;
+            // border: 1px solid red;
+
+            &:first-child {
+              width: 50%;
+              font-size: 17px;
+              padding-left: 15px;
+            }
+            &:last-child {
+              width: 50%;
+              font-size: 19px;
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .cart_check_price_order_button {
+        width: 290px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        font-size: 23px;
+        color: rgba(0,0,0,0.1);
+        background-color: #F0F0F0;
+        border-radius: 8px;
+        margin-top: 15px;
+      }
+    }
+  }
+}

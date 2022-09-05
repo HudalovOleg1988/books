@@ -1,0 +1,239 @@
+@import "/book/css/global/var";
+
+.main {
+  // border: 1px solid red;
+  .fontFamily;
+  overflow: hidden;
+
+  @media (max-width: 1205px) {
+    width: 1205px;
+  }
+
+  .main_map {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    // border: 1px solid blue;
+
+    div {
+      float: left;
+      height: 30px;
+      // border: 1px solid blue;
+
+      a {
+        text-decoration: none;
+      }
+    }
+    span {
+      float: left;
+      display: inline-block;
+      width: 20px;
+      height: 30px;
+      background: url('/book/image/icon/rightCategoryMap.png') no-repeat center center;
+      background-size: 9px;
+      // border: 1px solid blue;
+
+      &:last-child {
+        background: none;
+        width: 0;
+      }
+    }
+  }
+
+  .main_name {
+    max-height: 60px;
+    line-height: 25px;
+    font-size: 21px;
+    padding: 5px 0;
+    padding-left: 30px;
+    // border: 1px solid blue;
+  }
+
+  .main_product {
+    position: relative;
+    min-height: 700px;
+    padding-right: 400px;
+    // border: 1px solid blue;
+
+    .main_product_gallery {
+      width: 100%;
+      height: 700px;
+      padding-right: 100px;
+      // border: 1px solid blue;
+      border-right: 1px solid #000;
+
+      .main_product_gallery_big_mini_image {
+        float: right;
+        width: 100px;
+        height: 700px;
+        // border: 1px solid blue;
+        margin-right: -100px;
+
+        .main_product_gallery_big_mini_image_img {
+          position: relative;
+          width: 100px;
+          height: 100px;
+          margin-bottom: 10px;
+          // border: 1px solid blue;
+
+          .main_product_gallery_big_mini_image_img_img_height {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 95%;
+            margin: auto;
+          }
+        }
+      }
+
+      .main_product_gallery_big_image {
+        position: relative;
+        width: 700px;
+        height: 700px;
+        // border: 1px solid blue;
+        margin: auto;
+
+        .main_product_gallery_big_image_img_height {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 95%;
+          margin: auto;
+        }
+      }
+    }
+
+    .main_product_info {
+      float: right;
+      width: 400px;
+      // height: 1000px;
+      // border: 1px solid blue;
+      margin-right: -400px;
+
+      .delete_cart {
+        display: block;
+        width: 300px;
+        height: 61px;
+        line-height: 61px;
+        text-decoration: none;
+        text-align: center;
+        color: #000;
+        font-size: 18px;
+        background-color: #F0F0F0;
+        border-radius: 5px;
+        // border: 1px solid red;
+        margin: auto;
+      }
+
+      .main_product_info_add_cart {
+        // display: block;
+        height: 61px;
+        width: 300px;
+        color: #000;
+        background-color: #F0F0F0;
+        // border: 1px solid blue;
+        border-radius: 5px;
+        margin: auto;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken(#F0F0F0, 5%);
+        }
+
+        div {
+          float: left;
+          height: 61px;
+          line-height: 61px;
+          text-align: center;
+          // border: 1px solid blue;
+
+          span {
+            // border: 1px solid blue;
+          }
+
+          &:first-child {
+            position: relative;
+            width: 55%;
+
+            span {
+              font-size: 17px;
+              background: url('/book/image/icon/cart.png') no-repeat left center;
+              background-size: 17px;
+              padding-left: 25px;
+            }
+
+            &:after {
+              content: "";
+              display: block;
+              width: 2px;
+              height: 21px;
+              position: absolute;
+              top: 20px;
+              right: 0;
+              background-color: #000;
+            }
+          }
+          &:last-child {
+            width: 45%;
+
+            span {
+              font-size: 18px;
+              background: url('/book/image/icon/ruble.png') no-repeat right center;
+              background-size: 13px;
+              padding-right: 15px;
+            }
+          }
+        }
+      }
+
+      .main_product_info_specifications {
+        width: 300px;
+        margin: 40px auto;
+
+        li {
+          overflow: hidden;
+
+          div {
+            float: left;
+            padding: 5px 0;
+            line-height: 25px;
+            // border: 1px solid blue;
+
+            &:first-child {
+              width: 50%;
+              font-size: 18px;
+              // color: lighten(#000,30%);
+              // border: 1px solid red;
+            }
+            &:last-child {
+              width: 50%;
+              font-size: 18px;
+              // border: 1px solid red;
+            }
+          }
+        }
+      }
+
+      .main_product_info_descriptions {
+        width: 300px;
+        // border: 1px solid blue;
+        margin: auto;
+
+        .main_product_info_descriptions_header {
+          height: 30px;
+          line-height: 30px;
+          font-size: 18px;
+        }
+        .main_product_info_descriptions_text {
+          font-size: 13px;
+          font-weight: normal;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
